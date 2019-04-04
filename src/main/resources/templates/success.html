@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span>成功</span>
+    <!--th:text 将span里面的文本内容设置为${xxx}-->
+    <span th:text="${hello}"></span>    <hr>
+    <span th:utext="${hello}"></span>
+    <hr>
+    <h1 th:each="user : ${users}">[[user]]</h1>
+    <hr>
+    <div th:each="user : ${users}">[[user]]</div>
+</body>
+</html>
