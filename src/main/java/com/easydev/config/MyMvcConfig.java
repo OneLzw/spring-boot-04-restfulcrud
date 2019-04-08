@@ -27,12 +27,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
     }
 
     //注册拦截器
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        //静态资源 Springboot已经做好了静态资源映射
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/" , "/index" , "/index.html" , "/user/login");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        //静态资源 Springboot已经做好了静态资源映射
+//        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+//                .excludePathPatterns("/" , "/index" , "/index.html" , "/user/login");
+//    }
 
     /**
      * 自己配置的国际化解析器
