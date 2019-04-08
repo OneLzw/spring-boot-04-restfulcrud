@@ -13,14 +13,17 @@
     <h1>
         <span th:text="#{login.tip}"></span>
     </h1>
-    <form th:action="@{/login}" th:method="post">
+    <form th:action="@{/user/login}" th:method="post">
+        <div th:if="${not #strings.isEmpty(msg)}">
+            <span style="color:red;" th:text="${msg}"> : </span>
+        </div>
         <div>
             <span th:text="#{login.account}"> : </span>
             <input th:type="text" th:name="account" >
         </div>
         <div>
             <span th:text="#{login.password}"> : </span>
-            <input th:type="text" th:name="password" >
+            <input th:type="password" th:name="password" >
         </div>
         <div>
             <input th:type="submit" th:value="#{login.submit}">
